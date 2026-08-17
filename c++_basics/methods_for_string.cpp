@@ -17,6 +17,6 @@ int main(){
   name.erase(0,3);
   
   std::cout<< name ;
-
+  std::cout<< x;
   return 0;
 }
