@@ -1,27 +1,35 @@
 #include <iostream>
 
-int main(){
+// This program shows how arrays work.
+// An array stores many values of the same type in one place.
 
-  using std::string;
+int main() {
+    // Create an array that can store 5 prices
+    double prices[5];
 
-  double cars[5];
-  int opp = 0;
-  double price;
+    std::cout << "Enter 5 car prices:\n";
 
-  std::cout<<"enter the price u are looking for: ";
-  std::cin >> price;
-
-  for(int i = 0; i <= 5; i ++){
-    std::cout<<"enetr the price of the car "<< i+1 << " :";
-    std::cin>> cars[i];
-    
-    if (cars[i] == price){
-      opp = i;
+    for (int i = 0; i < 5; i++) {
+        std::cout << "Car " << i + 1 << " price: ";
+        std::cin >> prices[i];
     }
-  }
 
-  std::cout<<"the car u are looking for is: " << opp << " " << cars[opp] << std::endl;
+    std::cout << "\nThe prices are:\n";
 
-  
-  return 0;
+    for (int i = 0; i < 5; i++) {
+        std::cout << "Car " << i + 1 << ": " << prices[i] << "\n";
+    }
+
+    return 0;
 }
+
+/*
+How to compile and run:
+Windows:
+    g++ array.cpp -o array
+    .\array.exe
+
+Linux/Mac:
+    g++ array.cpp -o array
+    ./array
+*/

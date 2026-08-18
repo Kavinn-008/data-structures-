@@ -1,37 +1,41 @@
-// Arithmetic Operations and User Input
-// This program shows how to take input from user and do basic math
-//
-// COMPILE: g++ -o arthametic_op arthametic_op.cpp
-// RUN: ./arthametic_op.exe
-
 #include <iostream>
+#include <string>
 
-int main(){
-  using std::string;
-  using std::cout;
-  using std::cin;
+// This program shows basic arithmetic operations
+// and how to take input from the user.
 
-  // Get user's name
-  string name;
-  cout << "Enter your name: " << "\n";
-  std::getline(std::cin >> std::ws, name);
-  cout << "Hello " << name << "!\n\n";
+int main() {
+    std::string name;
+    int age;
+    int number1 = 10;
+    int number2 = 5;
 
-  // Get user's age
-  int age;
-  cout << "Enter your age: ";
-  cin >> age;
-  cout << "You are " << age << " years old.\n\n";
+    std::cout << "Enter your name: ";
+    std::getline(std::cin, name);
 
-  // Simple arithmetic examples
-  int num1 = 10;
-  int num2 = 5;
-  
-  cout << "Simple Math:" << "\n";
-  cout << num1 << " + " << num2 << " = " << (num1 + num2) << "\n";
-  cout << num1 << " - " << num2 << " = " << (num1 - num2) << "\n";
-  cout << num1 << " * " << num2 << " = " << (num1 * num2) << "\n";
-  cout << num1 << " / " << num2 << " = " << (num1 / num2) << "\n";
+    std::cout << "Hello, " << name << "!\n";
 
-  return 0;
+    std::cout << "Enter your age: ";
+    std::cin >> age;
+
+    std::cout << "You are " << age << " years old.\n\n";
+
+    std::cout << "Simple Math:\n";
+    std::cout << number1 << " + " << number2 << " = " << (number1 + number2) << "\n";
+    std::cout << number1 << " - " << number2 << " = " << (number1 - number2) << "\n";
+    std::cout << number1 << " * " << number2 << " = " << (number1 * number2) << "\n";
+    std::cout << number1 << " / " << number2 << " = " << (number1 / number2) << "\n";
+
+    return 0;
 }
+
+/*
+How to compile and run:
+Windows:
+    g++ arthametic_op.cpp -o arthametic_op
+    .\arthametic_op.exe
+
+Linux/Mac:
+    g++ arthametic_op.cpp -o arthametic_op
+    ./arthametic_op
+*/

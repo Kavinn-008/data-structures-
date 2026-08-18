@@ -1,11 +1,24 @@
 #include <iostream>
 
-int main(){
+// Ternary operator is a short way to write if-else.
 
-  using std::cout;
-  using std::cin;
-  int a = 9;
-  a % 2 == 0  ? cout<<a << " is a even numeber" : cout << a <<" is a odd number";
+int main() {
+    int number = 9;
 
-  return 0;
-}   
+    (number % 2 == 0)
+        ? std::cout << number << " is an even number.\n"
+        : std::cout << number << " is an odd number.\n";
+
+    return 0;
+}
+
+/*
+How to compile and run:
+Windows:
+    g++ ternary_opp.cpp -o ternary_opp
+    .\ternary_opp.exe
+
+Linux/Mac:
+    g++ ternary_opp.cpp -o ternary_opp
+    ./ternary_opp
+*/

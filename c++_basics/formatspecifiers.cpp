@@ -1,29 +1,31 @@
-// Output Formatting - Different ways to display numbers
-// %f is for decimal numbers, %d is for whole numbers
-//
-// COMPILE: g++ -o formatspecifiers formatspecifiers.cpp
-// RUN: ./formatspecifiers.exe
-
 #include <iostream>
 
-int main(){
-  // Declare some numbers
-  float a = 1.234;      // Float number (smaller)
-  float b = 2.345;
-  double c = 3.456789;  // Double number (more precise)
-  int num = 42;         // Whole number
+// This program shows how to print different kinds of values.
+// We can print whole numbers, decimal numbers, and text.
 
-  // Using printf to format output
-  printf("Float number: %.3f \n", a);           // %.3f means show 3 decimal places
-  printf("Another float: %.2f \n", b);         // %.2f means show 2 decimal places
-  printf("Double number: %f \n", c);           // %f shows default decimal places
-  printf("Whole number: %d \n", num);          // %d for integers
+int main() {
+    float value1 = 1.234;
+    float value2 = 2.345;
+    double value3 = 3.456789;
+    int count = 42;
 
-  // Using cout (C++ style)
-  std::cout << "\nUsing cout:" << "\n";
-  std::cout << "Float: " << a << "\n";
-  std::cout << "Double: " << c << "\n";
-  std::cout << "Integer: " << num << "\n";
+    std::cout << "Float value: " << value1 << "\n";
+    std::cout << "Second float value: " << value2 << "\n";
+    std::cout << "Double value: " << value3 << "\n";
+    std::cout << "Integer value: " << count << "\n";
 
-  return 0;
+    std::cout << "\nThis is the beginner way to print values using cout.\n";
+
+    return 0;
 }
+
+/*
+How to compile and run:
+Windows:
+    g++ formatspecifiers.cpp -o formatspecifiers
+    .\formatspecifiers.exe
+
+Linux/Mac:
+    g++ formatspecifiers.cpp -o formatspecifiers
+    ./formatspecifiers
+*/

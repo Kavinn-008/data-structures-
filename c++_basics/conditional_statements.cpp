@@ -1,30 +1,37 @@
 #include <iostream>
+#include <string>
 
-int main(){
-  using std::cout;
-  using std::cin;
+// This program uses if and else to make decisions.
 
-  int age;
-  cout<< " enter the age:";
-  cin >> age;
+int main() {
+    int age;
+    std::string name;
 
-  std::string name;
-  cout<<"enter your name:";
-  std::getline(cin >> std::ws, name);
+    std::cout << "Enter your age: ";
+    std::cin >> age;
 
-  if(age < 18)
-  {
-    cout<<"you are a miner " << name <<"\n";
-  }
-  else if(age > 18)
-  {
-    cout << " you are not a miner " << name << "\n";
-  }
-  else
-  {
-    cout << "you are neither a miner nor adult " << name << "\n";  
-  }
-  
+    std::cout << "Enter your name: ";
+    std::cin.ignore();
+    std::getline(std::cin, name);
 
-  return 0;
+    if (age < 18) {
+        std::cout << name << ", you are a minor.\n";
+    } else if (age >= 18 && age < 60) {
+        std::cout << name << ", you are an adult.\n";
+    } else {
+        std::cout << name << ", you are a senior adult.\n";
+    }
+
+    return 0;
 }
+
+/*
+How to compile and run:
+Windows:
+    g++ conditional_statements.cpp -o conditional_statements
+    .\conditional_statements.exe
+
+Linux/Mac:
+    g++ conditional_statements.cpp -o conditional_statements
+    ./conditional_statements
+*/

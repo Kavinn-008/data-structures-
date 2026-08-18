@@ -1,24 +1,30 @@
-  //https://cplusplus.com/reference/cmath/
-
-
-#include<iostream>
+#include <iostream>
 #include <cmath>
 
-int main(){
+// This program shows a few basic math functions from <cmath>.
 
-  double a = 2.34;
-  double b = 3.867;
-  double z;
+int main() {
+    double a = 2.34;
+    double b = 3.867;
 
-  //z = std::max(a,b);
-  //z = std::min(a,b);
-  //z = pow((int)a,3);
-  //z = sqrt(16);
-  //z = round(b);
-  //z = ceil(a);
-  //z = floor(a);
+    std::cout << "Maximum: " << std::max(a, b) << "\n";
+    std::cout << "Minimum: " << std::min(a, b) << "\n";
+    std::cout << "Square root of 16: " << std::sqrt(16) << "\n";
+    std::cout << "Power: " << std::pow(2, 3) << "\n";
+    std::cout << "Round: " << std::round(b) << "\n";
+    std::cout << "Ceiling: " << std::ceil(a) << "\n";
+    std::cout << "Floor: " << std::floor(a) << "\n";
 
-  std::cout << z ;
-
-  return 0;
+    return 0;
 }
+
+/*
+How to compile and run:
+Windows:
+    g++ somemath.cpp -o somemath
+    .\somemath.exe
+
+Linux/Mac:
+    g++ somemath.cpp -o somemath
+    ./somemath
+*/

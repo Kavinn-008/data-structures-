@@ -1,45 +1,50 @@
 #include <iostream>
+#include <string>
 
-struct car{
+// A structure is a custom data type.
+// It lets us store different kinds of information together.
 
-  int type;
-  std::string brand;
-  int size;
-
+struct Car {
+    std::string brand;
+    int year;
+    double price;
 };
 
-struct name{
-  std::string sex;
-  int hight;
-  std::string skin;
+struct Person {
+    std::string name;
+    std::string skinColor;
+    double height;
 };
 
+int main() {
+    Car myCar;
+    myCar.brand = "BMW";
+    myCar.year = 2022;
+    myCar.price = 25000.00;
 
-int mian(){
-  using std::string;
-  using std::cin;
-  using std::cout;
+    Person person1;
+    person1.name = "Alex";
+    person1.skinColor = "White";
+    person1.height = 5.9;
 
-  car mycar1;
+    std::cout << "Car brand: " << myCar.brand << "\n";
+    std::cout << "Car year: " << myCar.year << "\n";
+    std::cout << "Car price: " << myCar.price << "\n";
 
-  mycar1.brand = "bmw";
-  mycar1.size = 20;
-  mycar1.type = 30;
+    std::cout << "Person name: " << person1.name << "\n";
+    std::cout << "Skin color: " << person1.skinColor << "\n";
+    std::cout << "Height: " << person1.height << "\n";
 
-  name alex;
-
-  alex.skin = "white";
-  alex.sex = "male";
-  alex.hight = 5.9;
-
-  name john;
-
-  john.hight = 5.9;
-  john.skin = "black";
-  john.sex = "femail";
-
-  cout<<"john has a " << mycar1.brand << " and he is a " << john.skin;
-  cout<<"alex has a " << mycar1.brand << " and he is a " << alex.skin;
-
-  return 0;
+    return 0;
 }
+
+/*
+How to compile and run:
+Windows:
+    g++ structure.cpp -o structure
+    .\structure.exe
+
+Linux/Mac:
+    g++ structure.cpp -o structure
+    ./structure
+*/

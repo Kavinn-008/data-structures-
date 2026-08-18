@@ -1,38 +1,36 @@
-// Namespaces - A way to organize your code
-// Think of it like having two separate boxes for your variables
-// Namespaces help when different parts of code use the same variable names
-//
-// COMPILE: g++ -o namespace namespace.cpp
-// RUN: ./namespace.exe
-
 #include <iostream>
+#include <string>
 
-// First namespace with its own variables
+// Namespaces help us separate variables and functions.
+// This is useful when two parts of code use the same name.
+
 namespace first {
-  int a = 19;
-  std::string name = "kavin";
+    int score = 10;
+    std::string name = "Alice";
 }
 
-// Second namespace with its own variables (also has 'a' but it's different)
 namespace second {
-  int a = 20;
-  std::string name = "rkashitha";
+    int score = 20;
+    std::string name = "Bob";
 }
 
-int main(){
-  using std::cout;
-  
-  // Local variable in main function
-  int a = 69;
-  cout << "Main's a = " << a << "\n";
-  
-  // Access variables from first namespace using :: (scope resolution operator)
-  cout << "First namespace a = " << first::a << "\n";
-  cout << "First namespace name = " << first::name << "\n";
-  
-  // Access variables from second namespace
-  cout << "Second namespace a = " << second::a << "\n";
-  cout << "Second namespace name = " << second::name << "\n";
-  
-  return 0;
+int main() {
+    std::cout << "First score: " << first::score << "\n";
+    std::cout << "First name: " << first::name << "\n";
+
+    std::cout << "Second score: " << second::score << "\n";
+    std::cout << "Second name: " << second::name << "\n";
+
+    return 0;
 }
+
+/*
+How to compile and run:
+Windows:
+    g++ namespace.cpp -o namespace
+    .\namespace.exe
+
+Linux/Mac:
+    g++ namespace.cpp -o namespace
+    ./namespace
+*/

@@ -1,19 +1,30 @@
 #include <iostream>
+#include <string>
 
-int main(){
+// A for loop repeats code a fixed number of times.
 
-  std::string name;
+int main() {
+    std::string name;
 
-  for(int i = 0; i < 10 ; i++){
+    for (int i = 1; i <= 3; i++) {
+        std::cout << "Enter name " << i << ": ";
+        std::getline(std::cin, name);
 
-    std::cout<<"enter your name "<< i << " :";
-    std::getline(std::cin,name);
-
-    if(name == "kavin prashad"){
-      std::cout<<name;
-      break;
+        std::cout << "You entered: " << name << "\n";
     }
-  }
 
-  return 0;
+    std::cout << "The loop is finished.\n";
+
+    return 0;
 }
+
+/*
+How to compile and run:
+Windows:
+    g++ forloop.cpp -o forloop
+    .\forloop.exe
+
+Linux/Mac:
+    g++ forloop.cpp -o forloop
+    ./forloop
+*/

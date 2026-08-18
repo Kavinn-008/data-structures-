@@ -1,28 +1,33 @@
-// Pythagorean Theorem Calculator
-// Calculate the hypotenuse of a right-angled triangle
-//
-// COMPILE: g++ -o practice_project practice_project.cpp
-// RUN: ./practice_project.exe
-
 #include <iostream>
 #include <cmath>
 
-int main(){
-  using std::cout;
-  using std::cin;
+// This program calculates the length of the hypotenuse
+// in a right triangle using the Pythagorean theorem.
 
-  double adj;
-  cout<<"enter the adj side of the triangle in cm:";
-  cin>> adj;
-  
-  double opp;
-  cout<<"enter the opposit side of the triangle in cm:";
-  cin>> opp;
+int main() {
+    double side1;
+    double side2;
 
-  double hyp;
+    std::cout << "Enter the first side of the triangle: ";
+    std::cin >> side1;
 
-  hyp = sqrt( pow(adj,2) + pow(opp,2) ); 
-  std::cout <<"the length of the hyp of the right angled triabgel is:" << hyp << "cm\n";
+    std::cout << "Enter the second side of the triangle: ";
+    std::cin >> side2;
 
-  return 0;
+    double hypotenuse = sqrt((side1 * side1) + (side2 * side2));
+
+    std::cout << "The hypotenuse is: " << hypotenuse << "\n";
+
+    return 0;
 }
+
+/*
+How to compile and run:
+Windows:
+    g++ practice_project.cpp -o practice_project
+    .\practice_project.exe
+
+Linux/Mac:
+    g++ practice_project.cpp -o practice_project
+    ./practice_project
+*/

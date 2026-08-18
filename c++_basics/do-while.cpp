@@ -1,15 +1,32 @@
 #include <iostream>
+#include <string>
 
-int main(){
+// do-while loop runs at least once before checking the condition
 
-  std::string name;
+int main() {
+    std::string name;
 
-  do{
-    std::cout<<"enter your name sir:";
-    std::getline(std::cin,name);
-  }while(!name.empty());
+    do {
+        std::cout << "Enter your name: ";
+        std::getline(std::cin, name);
 
-  std::cout<<" hello " << name;
+        if (name.empty()) {
+            std::cout << "Name cannot be empty. Please try again.\n";
+        }
+    } while (name.empty());
 
-  return 0;
+    std::cout << "Hello, " << name << "!\n";
+
+    return 0;
 }
+
+/*
+How to compile and run:
+Windows:
+    g++ do-while.cpp -o do-while
+    .\do-while.exe
+
+Linux/Mac:
+    g++ do-while.cpp -o do-while
+    ./do-while
+*/

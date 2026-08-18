@@ -1,22 +1,35 @@
-//https://cplusplus.com/reference/string/
-
 #include <iostream>
+#include <string>
 
-int main(){
+// This file shows some basic string functions.
 
-  //std::string name;
-  std::string name = "123456789";
-  //std::cout<<"enter your name:";
-  //std::getline(std::cin,name);
+int main() {
+    std::string name = "Hello World";
 
-  int x = 0;
-  //int x = name.length();
-  //x = name.empty();
-  //name.insert(0,"@");
-  //x = name.find("k");
-  name.erase(0,3);
-  
-  std::cout<< name ;
-  std::cout<< x;
-  return 0;
+    std::cout << "Original text: " << name << "\n";
+    std::cout << "Length: " << name.length() << "\n";
+
+    if (name.empty()) {
+        std::cout << "The string is empty.\n";
+    } else {
+        std::cout << "The string is not empty.\n";
+    }
+
+    name.append("!");
+    std::cout << "After append: " << name << "\n";
+
+    std::cout << "First letter index: " << name.find('H') << "\n";
+
+    return 0;
 }
+
+/*
+How to compile and run:
+Windows:
+    g++ methods_for_string.cpp -o methods_for_string
+    .\methods_for_string.exe
+
+Linux/Mac:
+    g++ methods_for_string.cpp -o methods_for_string
+    ./methods_for_string
+*/

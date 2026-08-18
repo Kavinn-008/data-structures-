@@ -1,67 +1,65 @@
 #include <iostream>
 
-int main(){
+// switch is used when we want to check one value against many cases.
 
-  using std::cout;
-  using std::cin;
+int main() {
+    int month;
 
-  int month;
-  std::cout << "Enter the number of the month (1-12):";
-  std::cin >> month;
+    std::cout << "Enter a number from 1 to 12: ";
+    std::cin >> month;
 
+    switch (month) {
+        case 1:
+            std::cout << "January\n";
+            break;
+        case 2:
+            std::cout << "February\n";
+            break;
+        case 3:
+            std::cout << "March\n";
+            break;
+        case 4:
+            std::cout << "April\n";
+            break;
+        case 5:
+            std::cout << "May\n";
+            break;
+        case 6:
+            std::cout << "June\n";
+            break;
+        case 7:
+            std::cout << "July\n";
+            break;
+        case 8:
+            std::cout << "August\n";
+            break;
+        case 9:
+            std::cout << "September\n";
+            break;
+        case 10:
+            std::cout << "October\n";
+            break;
+        case 11:
+            std::cout << "November\n";
+            break;
+        case 12:
+            std::cout << "December\n";
+            break;
+        default:
+            std::cout << "Invalid month number.\n";
+            break;
+    }
 
-  switch(month){
-
-    case 1:
-      cout<<"jan";
-      break;
-    
-      case 2:
-        cout<<"fib";
-        break;
-      
-      case 3:
-        cout<<"march";
-        break;
-
-      case 4:
-        cout<<"apr";
-        break;
-
-      case 5:
-        cout<<"may";
-        break;
-
-      case 6:
-        cout<<"june";
-        break;
-
-      case 7:
-        cout<<"july";
-        break;
-
-      case 8:
-        cout<<"aug";
-        break;
-
-      case 9:
-        cout<<"sep";
-        break;
-
-      case 10:
-        cout<<"oct";
-        break;
-
-      case 11:
-        cout<<"nove";
-        break;
-
-      case 12:
-        cout<<"dec";
-        break;
-
-      default :
-        cout<<"thats a invalid month";
-  }
-  return 0;
+    return 0;
 }
+
+/*
+How to compile and run:
+Windows:
+    g++ switch.cpp -o switch
+    .\switch.exe
+
+Linux/Mac:
+    g++ switch.cpp -o switch
+    ./switch
+*/
