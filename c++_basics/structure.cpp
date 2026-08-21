@@ -6,7 +6,9 @@
 
 struct Car {
     std::string brand;
-    int year;
+    int 
+    
+    year;
     double price;
 };
 
