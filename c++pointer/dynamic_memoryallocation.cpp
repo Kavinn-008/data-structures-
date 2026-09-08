@@ -1,6 +1,3 @@
-// Compile: g++ dynamic_memoryallocation.cpp -o dynamic_memoryallocation
-// Run:     .\dynamic_memoryallocation.exe
-
 #include <iostream>
 
 int main(){
