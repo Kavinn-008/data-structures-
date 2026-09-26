@@ -3,68 +3,65 @@
 using namespace std;
 
 
-	// CREATE NODE CLASS HERE //
-	//                        //
-	//                        //
-	//                        //
-	//                        //
-	////////////////////////////
+class Node{
+    public:
+        int value;
+        Node *next;
+
+    Node(int val){
+        this->value = val;
+        next = nullptr;
+    }
+};
 
 
 class LinkedList {
     private:
-		// CREATE MEMBER VARIABLES HERE //
-		//                              //
-		//                              //
-		//                              //
-		//                              //
-		//////////////////////////////////
+		Node *head;
+        Node *tail;
+        int length;
 
     public:
-		// CREATE LL CONSTRUCTOR HERE //
-		//                            //
-		//                            //
-		//                            //
-		//                            //
-		////////////////////////////////
+        LinkedList(int value){
+            Node *newnode = new Node(value);
+            head = newnode;
+            tail = newnode;
+            length = 1;
+        }
 
-        ~LinkedList() {
-            Node* temp = head;
-            while (head) {
-                head = head->next;
+        ~LinkedList(){
+            Node *temp = head;
+            while(head != nullptr){
+                head = temp -> next;
                 delete temp;
                 temp = head;
             }
         }
 
-        void printList() {
-            Node* temp = head;
-            while (temp != nullptr) {
-                cout << temp->value << endl;
+        void printList(){
+            Node *temp = head;
+            while(temp != nullptr){
+                cout<< temp->value << endl;
                 temp = temp->next;
             }
         }
 
-        void getHead() {
-            if (head == nullptr) {
-                cout << "Head: nullptr" << endl;
-            } else {
-                cout << "Head: " << head->value << endl;
-            }
+        void getHead(){
+            cout<<head->value<<endl;
         }
 
-        void getTail() {
-            if (tail == nullptr) {
-                cout << "Tail: nullptr" << endl;
-            } else { 
-                cout << "Tail: " << tail->value << endl;
-            }  
+        void getTail(){
+            cout<< tail -> value<< endl;
         }
 
-        void getLength() {
-            cout << "Length: " << length << endl;
-        }
+        void getLength(){
+            cout<< length << endl;
+        }    
 
+        void append(int value){
+            Node *append = new Node(value);
+            tail = append;
+        }
 };
 
 
