@@ -4,15 +4,7 @@
 using namespace std;
 int main()
 {
-  vector<int> nums = {1, 2, 3, 4, 5, 34};
-  // int n = nums.size();
-  // sort(nums.begin(), nums.end());
-  // auto upper = upper_bound(nums.begin(),nums.end(), 5);
-  // for (int i = 0; i < n; i++)
-  //{
-  //  cout << nums[i] << endl;
-  //}
-  auto fin = min_element(nums.begin(), nums.end());
-  cout << *fin << endl;
+  vector<vector<int>> nums = {{1,2,5},{6,7,4},{8,9,6}};
+  sort(nums.begin(),nums.end());
   return 0;
 }

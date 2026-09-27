@@ -56,11 +56,37 @@ class LinkedList {
 
         void getLength(){
             cout<< length << endl;
-        }    
+        }
 
         void append(int value){
-            Node *append = new Node(value);
-            tail = append;
+            Node *temp = new Node(value);
+            tail-> next = temp;
+            tail = temp;
+            length++;
+        }
+
+        void delLast(){
+            if(length == 0){
+                return;
+            }
+            if(length == 1){
+                head = nullptr;
+                tail = nullptr;
+            }
+            else{
+                Node *temp = head;                          //int pre = head;
+                while(temp -> next != tail){            //while(temp -> next != nullptr){
+                    temp = temp -> next;                 //      pre = temp;
+                }                                        //      temp = temp-> next;}
+                tail = temp;
+                temp -> next = nullptr;
+                
+            }
+            length --;
+        }
+
+        void prepend(int val){
+            
         }
 };
 
@@ -69,25 +95,20 @@ class LinkedList {
 int main() {
         
     LinkedList* myLinkedList = new LinkedList(4);
-
+    /*
     myLinkedList->getHead();
     myLinkedList->getTail();
     myLinkedList->getLength();
     
     cout << "\nLinked List:\n";
     myLinkedList->printList();
-
-    /*  
-        EXPECTED OUTPUT:
-    	----------------
-        Head: 4
-        Tail: 4
-        Length: 1
-
-        Linked List:
-        4
-
     */
+   myLinkedList -> append(6);
+   myLinkedList -> append(9);
+   myLinkedList -> append(7);
+   myLinkedList -> delLast();
+   myLinkedList -> printList();
+   
        
 }
 
