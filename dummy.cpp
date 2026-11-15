@@ -4,7 +4,8 @@
 using namespace std;
 int main()
 {
-  vector<vector<int>> nums = {{1,2,5},{6,7,4},{8,9,6}};
-  sort(nums.begin(),nums.end());
+  std::vector<int> nums = {1,2,3,4,5};
+  int size = nums.size();
+  cout<<size<<endl;
   return 0;
 }
